@@ -20,7 +20,7 @@ URL:      quoll.eu
 
    <Group description="Page Text" selector="body">
      <Variable name="body.font" description="Font" type="font"
-         default="normal normal 13px 'Trebuchet MS',Trebuchet,sans-serif" value="normal normal 13px 'Trebuchet MS',Trebuchet,sans-serif"/>
+         default="normal normal 13px 'Montserrat',Trebuchet,sans-serif" value="normal normal 13px 'Montserrat',Trebuchet,sans-serif"/>
      <Variable name="body.text.color" description="Text Color" type="color" default="#bbbbbb" value="#bbbbbb"/>
    </Group>
 
@@ -37,7 +37,7 @@ URL:      quoll.eu
 
    <Group description="Blog Title" selector=".header h1">
      <Variable name="header.font" description="Font" type="font"
-         default="normal normal 60px 'Trebuchet MS',Trebuchet,sans-serif" value="normal normal 60px 'Trebuchet MS',Trebuchet,sans-serif"/>
+         default="normal normal 60px 'Expletus Sans',Trebuchet,sans-serif" value="normal normal 60px 'Expletus Sans',Trebuchet,sans-serif"/>
      <Variable name="header.text.color" description="Text Color" type="color" default="#ffffff"  value="#ffffff"/>
    </Group>
 
@@ -48,7 +48,7 @@ URL:      quoll.eu
 
    <Group description="Tabs Text" selector=".tabs-inner .widget li a">
      <Variable name="tabs.font" description="Font" type="font"
-         default="normal bold 16px 'Trebuchet MS',Trebuchet,sans-serif" value="normal bold 16px 'Trebuchet MS',Trebuchet,sans-serif"/>
+         default="normal bold 16px 'Expletus Sans',Trebuchet,sans-serif" value="normal bold 16px 'Expletus Sans',Trebuchet,sans-serif"/>
      <Variable name="tabs.text.color" description="Text Color" type="color" default="#ffffff" value="#ffffff"/>
      <Variable name="tabs.selected.text.color" description="Selected Color" type="color" default="#ffffff" value="#ffffff"/>
    </Group>
@@ -60,13 +60,13 @@ URL:      quoll.eu
 
    <Group description="Date Header" selector=".main-inner h2.date-header">
      <Variable name="date.font" description="Font" type="font"
-         default="normal normal 14px 'Trebuchet MS',Trebuchet,sans-serif" value="normal normal 14px 'Trebuchet MS',Trebuchet,sans-serif"/>
+         default="normal normal 14px 'Montserrat',Trebuchet,sans-serif" value="normal normal 14px 'Montserrat',Trebuchet,sans-serif"/>
      <Variable name="date.text.color" description="Text Color" type="color" default="$(body.text.color)" value="$(body.text.color)"/>
    </Group>
 
    <Group description="Post Title" selector="h3.post-title a">
      <Variable name="post.title.font" description="Font" type="font"
-         default="normal bold 20px 'Trebuchet MS',Trebuchet,sans-serif" value="normal bold 20px 'Trebuchet MS',Trebuchet,sans-serif"/>
+         default="normal bold 20px 'Expletus Sans',Trebuchet,sans-serif" value="normal bold 20px 'Expletus Sans',Trebuchet,sans-serif"/>
      <Variable name="post.title.text.color" description="Text Color" type="color"
          default="#ffffff" value="#ffffff"/>
    </Group>
@@ -79,7 +79,7 @@ URL:      quoll.eu
 
    <Group description="Gadget Title Color" selector="h2">
      <Variable name="widget.title.font" description="Font" type="font"
-        default="normal bold 14px 'Trebuchet MS',Trebuchet,sans-serif" value="normal bold 14px 'Trebuchet MS',Trebuchet,sans-serif"/>
+        default="normal bold 14px 'Montserrat',Trebuchet,sans-serif" value="normal bold 14px 'Montserrat',Trebuchet,sans-serif"/>
      <Variable name="widget.title.text.color" description="Title Color" type="color" default="#ffffff" value="#ffffff"/>
    </Group>
 
@@ -101,13 +101,13 @@ URL:      quoll.eu
    </Group>
 
    <Variable name="body.background" description="Body Background" type="background"
-       color="$(body.background.color)" default="$(color) none repeat-x scroll top center" value="#000000 url(//themes.googleusercontent.com/image?id=0BwVBOzw_-hbMYTM3ZTRlZTktYzE4ZC00NWU0LWEyMzctOWFlZjVkZTkzNGY4) repeat fixed top center"/>
+       color="$(body.background.color)" default="$(color) none repeat-x scroll top center" value="#000000 url(//cdn.rawgit.com/andw99/kravmagaimpact/master/wild_oliva.png) repeat fixed top center"/>
    <Variable name="content.background" description="Content Background" type="background"
        color="$(content.background.color)" default="$(color) none repeat scroll top center" value="transparent url(//blogblog.com/1kt/travel/bg_black_70.png) repeat scroll top left"/>
    <Variable name="comments.background" description="Comments Background" type="background"
        default="#cccccc none repeat scroll top center" value="transparent url(//blogblog.com/1kt/travel/bg_black_50.png) repeat scroll top center"/>
 
-   <Variable name="content.imageBorder.top.space" description="Content Image Border Top Space" type="length" default="0" value="0"/>
+   <Variable name="content.imageBorder.top.space" description="Content Image Border Top Space" type="length" default="0" value="20px"/>
    <Variable name="content.imageBorder.top" description="Content Image Border Top" type="url" default="none" value="none"/>
 
    <Variable name="content.margin" description="Content Margin Top" type="length" default="20px" value="20px"/>
@@ -130,6 +130,9 @@ URL:      quoll.eu
 
 /* Content
 ----------------------------------------------- */
+@import url(http://fonts.googleapis.com/css?family=Expletus+Sans:500|Montserrat);
+/* font-family: 'Montserrat', sans-serif; - text
+font-family: 'Expletus Sans', cursive; - headings */
 body {
   font: $(body.font);
   color: $(body.text.color);
@@ -197,12 +200,12 @@ a:hover {
 
 .header h1::first-letter {
   color: red;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .header h1 a::first-letter {
   color: red;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .header .description {
@@ -552,8 +555,8 @@ margin-top: 12px;
 {
 display: inline-block;
 margin-right: 15px;
-font-family: 'Patua One', 'Helvetica Neue', Helvetica, Arial,Verdana,sans-serif;
-font-size: 14px;
+font-family: 'Expletus Sans', Trebuchet, Arial,Verdana,sans-serif;
+font-size: 18px;
 text-transform: uppercase;
 }
 
@@ -564,19 +567,19 @@ display: none;
 
 #boxed_wrapper
 {
-width: 980px;
+width: 80vw;
 margin: auto;
 }
 
 .KMI_standard_wrapper
 {
-width: 960px;
+width: 80vw;
 margin: auto;
 }
 
 .KMI_standard_wrapper.wide
 {
-width: 980px;
+width: 80vw;
 }
 
 .KMI_standard_wrapper.header
@@ -690,7 +693,7 @@ background: none;
 {
 list-style: none;
 margin: auto;
-width: 600px;
+width: auto;
 height: 50px;
 z-index: 999;
 float: left;
@@ -710,12 +713,18 @@ display: block;
 float :left;
 margin: 0 0 0 0;
 padding: 18px 15px 14px 15px;
-color: #2c2f32;
-font-family: 'Patua One';
+color: #2c2f3c;
+font-family: 'Expletus Sans';
 text-transform: uppercase;
-font-size: 13px;
+font-size: 18px;
 font-weight: 500;
-border-right: 1px solid #EBEBEC;
+border-right: 1px solid #7c7c7c;
+}
+
+.main_nav ul li a::first-letter,  .main_nav li a::first-letter
+{
+color: red;
+font-weight: 700;
 }
 
 .main_nav ul li ul li a,  .main_nav li ul li a
@@ -786,14 +795,6 @@ text-decoration: none;
 transition: color .2s linear, background .1s linear;
 }
 
-/* Font Face ----------------------------------------------- */
-@font-face {
-font-family: 'Patua One';
-font-style: normal;
-font-weight: 400;
-src: local('Patua One'), local('PatuaOne-Regular'), url(http://themes.googleusercontent.com/static/fonts/patuaone/v3/yAXhog6uK3bd3OwBILv_SLO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
-}
-
 ul{
 margin: 0;
 padding: 0;
@@ -804,9 +805,9 @@ list-style: none;
 ]]></b:skin>
 
     <b:template-skin>
-      <b:variable default='960px' name='content.width' type='length' value='960px'/>
-      <b:variable default='0' name='main.column.left.width' type='length' value='0px'/>
-      <b:variable default='310px' name='main.column.right.width' type='length' value='310px'/>
+      <b:variable default='960px' name='content.width' type='string' value='80vw'/>
+      <b:variable default='0' name='main.column.left.width' type='string' value='0'/>
+      <b:variable default='310px' name='main.column.right.width' type='string' value='20vw'/>
 
       <![CDATA[
       body {
@@ -877,31 +878,36 @@ list-style: none;
 <!-- Begin Navigation -->
 <div id='KMI_wrapper'>
 <div class='KMI_standard_wrapper'>
-<div class='menu-main-menu-container'><ul class='main_nav' id='main_menu'><li class='menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-533' id='menu-item-533'>
+<div class='menu-main-menu-container'>
 
-<a href='#'>Home</a></li>
+<ul class='main_nav' id='main_menu'><li class='menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-533' id='menu-item-533'>
 
-<li><a href='#'>Blog</a></li>
+<a href='#'>acceuil</a></li>
 
-<li><a href='#'>About Us</a></li>
+<li><a href='#'>blog</a></li>
 
-<li><a href='#'>Advertise Here</a></li>
+<li><a href='#'>krav maga</a></li>
 
-<li><a href='#'>Contact Us</a></li>
+<li><a href='#'>le club</a></li>
 
-<li><a href='htto://www.mybloggerlab.com'>MyBloggerLab</a></li>
-</ul></div>
+<li><a href='#'>les stages</a></li>
+
+<li><a href='#'>contact</a></li>
+
+</ul>
+</div>
+
 <div id='menu_border_wrapper'></div>
 <div class='KMI_social_wrapper'>
 <ul>
 
-<li><a href='#' target='_blank'><img alt='Facebook' src='http://4.bp.blogspot.com/-xodteBnLv_o/UMt2MhUxNTI/AAAAAAAAJkI/OaeijLxpGbM/s1600/facebook.png'/></a></li>
-
-<li><a href='#' target='_blank' title='Google+'><img alt='' src='http://1.bp.blogspot.com/-35AQ0H_SNHQ/UMt2dVSPtmI/AAAAAAAAJkg/cV1dPIIQoN4/s1600/google.png'/></a></li>
+<li><a href='#' target='_blank'><img alt='RSS feed' src='http://2.bp.blogspot.com/-kjb4ky538Ss/UMt2yD_43JI/AAAAAAAAJlM/TsonJ3OT0r4/s1600/rss.png'/></a></li>
 
 <li><a href='#' target='_blank' title='Linkedin'><img alt='' src='http://2.bp.blogspot.com/-qu2EsReNPng/UMt3aIQ6sSI/AAAAAAAAJlY/RcCW3BI06o4/s1600/linkedin.png'/></a></li>
 
-<li><a href='#' target='_blank'><img alt='RSS feed' src='http://2.bp.blogspot.com/-kjb4ky538Ss/UMt2yD_43JI/AAAAAAAAJlM/TsonJ3OT0r4/s1600/rss.png'/></a></li>
+<li><a href='#' target='_blank' title='Google+'><img alt='' src='http://1.bp.blogspot.com/-35AQ0H_SNHQ/UMt2dVSPtmI/AAAAAAAAJkg/cV1dPIIQoN4/s1600/google.png'/></a></li>
+
+<li><a href='#' target='_blank'><img alt='Facebook' src='http://4.bp.blogspot.com/-xodteBnLv_o/UMt2MhUxNTI/AAAAAAAAJkI/OaeijLxpGbM/s1600/facebook.png'/></a></li>
 
 </ul>
 </div>
