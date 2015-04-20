@@ -201,11 +201,13 @@ a:hover {
 .header h1::first-letter {
   color: red;
   font-weight: 700;
+  font-size: 1.2em;
 }
 
 .header h1 a::first-letter {
   color: red;
   font-weight: 700;
+  font-size: 1.2em;
 }
 
 .header .description {
