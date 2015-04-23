@@ -590,7 +590,7 @@ text-align: center;
 
 /* END CUSTOM CONTACT FORM */
 
-/* STICKY NAV BAR */
+/* ----- KMI STICKY NAV BAR ----- */
 #PageList1 {
 width: 100%;
 margin: auto;
@@ -614,122 +614,6 @@ top: 0px;
 left: 0px;
 z-index: 999;
 width:100%;
-}
-
-/* ----- KMI STICKY NAV BAR ----- */
-#kminavbar {
-width: 100%;
-margin: auto;
-height: 65px;
-border-top: 5px solid #6f0000;
-border-bottom: 1px solid #EBEBEC;
-background: rgba(76,76,76,0.5);
-background: -moz-linear-gradient(top, rgba(76,76,76,0.5) 0%, rgba(89,89,89,0.5) 12%, rgba(102,102,102,0.5) 25%, rgba(71,71,71,0.5) 39%, rgba(44,44,44,0.5) 50%, rgba(0,0,0,0.5) 51%, rgba(17,17,17,0.5) 60%, rgba(43,43,43,0.5) 76%, rgba(28,28,28,0.5) 91%, rgba(19,19,19,0.5) 100%);
-background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(76,76,76,0.5)), color-stop(12%, rgba(89,89,89,0.5)), color-stop(25%, rgba(102,102,102,0.5)), color-stop(39%, rgba(71,71,71,0.5)), color-stop(50%, rgba(44,44,44,0.5)), color-stop(51%, rgba(0,0,0,0.5)), color-stop(60%, rgba(17,17,17,0.5)), color-stop(76%, rgba(43,43,43,0.5)), color-stop(91%, rgba(28,28,28,0.5)), color-stop(100%, rgba(19,19,19,0.5)));
-background: -webkit-linear-gradient(top, rgba(76,76,76,0.5) 0%, rgba(89,89,89,0.5) 12%, rgba(102,102,102,0.5) 25%, rgba(71,71,71,0.5) 39%, rgba(44,44,44,0.5) 50%, rgba(0,0,0,0.5) 51%, rgba(17,17,17,0.5) 60%, rgba(43,43,43,0.5) 76%, rgba(28,28,28,0.5) 91%, rgba(19,19,19,0.5) 100%);
-background: -o-linear-gradient(top, rgba(76,76,76,0.5) 0%, rgba(89,89,89,0.5) 12%, rgba(102,102,102,0.5) 25%, rgba(71,71,71,0.5) 39%, rgba(44,44,44,0.5) 50%, rgba(0,0,0,0.5) 51%, rgba(17,17,17,0.5) 60%, rgba(43,43,43,0.5) 76%, rgba(28,28,28,0.5) 91%, rgba(19,19,19,0.5) 100%);
-background: -ms-linear-gradient(top, rgba(76,76,76,0.5) 0%, rgba(89,89,89,0.5) 12%, rgba(102,102,102,0.5) 25%, rgba(71,71,71,0.5) 39%, rgba(44,44,44,0.5) 50%, rgba(0,0,0,0.5) 51%, rgba(17,17,17,0.5) 60%, rgba(43,43,43,0.5) 76%, rgba(28,28,28,0.5) 91%, rgba(19,19,19,0.5) 100%);
-background: linear-gradient(to bottom, rgba(76,76,76,0.5) 0%, rgba(89,89,89,0.5) 12%, rgba(102,102,102,0.5) 25%, rgba(71,71,71,0.5) 39%, rgba(44,44,44,0.5) 50%, rgba(0,0,0,0.5) 51%, rgba(17,17,17,0.5) 60%, rgba(43,43,43,0.5) 76%, rgba(28,28,28,0.5) 91%, rgba(19,19,19,0.5) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313', GradientType=0 );
--webkit-box-shadow: 0 1px 0 #D2D2D3, 0 1px 3px rgba(0, 0, 0, .2);
--moz-box-shadow: 0 1px 0 #d2d2d3, 0 1px 3px rgba(0,0,0,.2);
--o-box-shadow: 0 1px 0 #d2d2d3, 0 1px 3px rgba(0,0,0,.2);
-box-shadow: 0 1px 0 #D2D2D3, 0 1px 3px rgba(0, 0, 0, .2);
-position: fixed;
-top: 0px;
-left: 0px;
-z-index: 999;
-width:100%;
-}
-
-#cssnav {
-border: 0px;
-margin: 0px;
-padding: 0px;
-width: auto;
-font: $(tabs.font); /* Template Designer - Change Font Type, Size, Etc */
-color: $(tabs.text.color); /* Template Designer - Change Font Size */
-}
-
-#cssnav ul {
-background: $(tabs.background.color); /* Template Designer - Change Menu Background */
-height: 40px; /* Change Height of Menu */
-list-style: none;
-margin: 0px;
-padding: 0px;
-}
-
-#cssnav li {
-float: none;
-display: inline-block;
-padding: 0px;
-}
-
-#cssnav li a {
-background: $(tabs.background.color); /* Template Designer - Change Menu Background */
-display: block;
-margin: 0px;
-text-align: center;
-font: $(tabs.font); /* Template Designer - Change Font Type, Size, Etc */
-text-decoration: none;
-}
-
-#cssnav > ul > li > a {
-color: $(tabs.text.color); /* Template Designer - Change Font Color */
-}
-
-#cssnav ul ul a {
-color: $(tabs.text.color); /* Template Designer - Change Color */
-}
-
-#cssnav li > a:hover, #cssnav ul li:hover {
-color: $(tabs.selected.text.color); /* Template Designer - Change Font Color on Hover */
-background-color: $(tabs.selected.background.color); /* Template Designer - Change Font Background on Hover */
-text-decoration: none;
-}
-
-#cssnav li ul {
-background: $(tabs.background.color); /* Template Designer - Change Menu Background */
-display: none;
-height: auto;
-padding: 0px;
-margin: 0px;
-border: 0px;
-position: absolute;
-width: 200px; /* Change Width Of DropDown Menu */
-z-index:9999;
-}
-
-#cssnav li:hover ul {
-display: block;
-}
-
-#cssnav li li {
-background: $(tabs.background.color); /* Template Designer - Change Background */
-display: block;
-float: none;
-margin: 0px;
-padding: 0px;
-width: 200px; /* Change Width Of DropDown Menu */
-}
-
-#cssnav li:hover li a {
-background: #FFFFFF; /* Template Designer - Change Background of Link on Hover */
-}
-
-#cssnav li ul a {
-display: block;
-height: auto;
-margin: 0px;
-padding: 10px;
-text-align: left;
-}
-
-#cssnav li ul a:hover, #cssnav li ul li:hover > a {
-color: $(tabs.selected.text.color); /* Template Designer - Change Text Color on Hover */
-background-color: $(tabs.selected.background.color); /* Template Designer - Change Background on Hover */
-border: 0px;
-text-decoration: none;
 }
 
 /* CUSTOM SEARCH */
@@ -1056,6 +940,7 @@ head.appendChild(script);
   <div class='fauxborder-right content-fauxborder-right'/>
   <div class='content-inner'>
 
+<b:if cond='data:blog.pageType == &quot;index&quot;'>
     <header>
     <div class='header-outer'>
     <div class='header-cap-top cap-top'>
@@ -1144,6 +1029,7 @@ head.appendChild(script);
     </div>
     </div>
     </header>
+</b:if>
 
     <div class='tabs-outer'>
     <div class='tabs-cap-top cap-top'>
