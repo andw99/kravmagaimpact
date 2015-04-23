@@ -616,6 +616,122 @@ z-index: 999;
 width:100%;
 }
 
+/* ----- KMI STICKY NAV BAR ----- */
+#kminavbar {
+width: 100%;
+margin: auto;
+height: 65px;
+border-top: 5px solid #6f0000;
+border-bottom: 1px solid #EBEBEC;
+background: rgba(76,76,76,0.5);
+background: -moz-linear-gradient(top, rgba(76,76,76,0.5) 0%, rgba(89,89,89,0.5) 12%, rgba(102,102,102,0.5) 25%, rgba(71,71,71,0.5) 39%, rgba(44,44,44,0.5) 50%, rgba(0,0,0,0.5) 51%, rgba(17,17,17,0.5) 60%, rgba(43,43,43,0.5) 76%, rgba(28,28,28,0.5) 91%, rgba(19,19,19,0.5) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(76,76,76,0.5)), color-stop(12%, rgba(89,89,89,0.5)), color-stop(25%, rgba(102,102,102,0.5)), color-stop(39%, rgba(71,71,71,0.5)), color-stop(50%, rgba(44,44,44,0.5)), color-stop(51%, rgba(0,0,0,0.5)), color-stop(60%, rgba(17,17,17,0.5)), color-stop(76%, rgba(43,43,43,0.5)), color-stop(91%, rgba(28,28,28,0.5)), color-stop(100%, rgba(19,19,19,0.5)));
+background: -webkit-linear-gradient(top, rgba(76,76,76,0.5) 0%, rgba(89,89,89,0.5) 12%, rgba(102,102,102,0.5) 25%, rgba(71,71,71,0.5) 39%, rgba(44,44,44,0.5) 50%, rgba(0,0,0,0.5) 51%, rgba(17,17,17,0.5) 60%, rgba(43,43,43,0.5) 76%, rgba(28,28,28,0.5) 91%, rgba(19,19,19,0.5) 100%);
+background: -o-linear-gradient(top, rgba(76,76,76,0.5) 0%, rgba(89,89,89,0.5) 12%, rgba(102,102,102,0.5) 25%, rgba(71,71,71,0.5) 39%, rgba(44,44,44,0.5) 50%, rgba(0,0,0,0.5) 51%, rgba(17,17,17,0.5) 60%, rgba(43,43,43,0.5) 76%, rgba(28,28,28,0.5) 91%, rgba(19,19,19,0.5) 100%);
+background: -ms-linear-gradient(top, rgba(76,76,76,0.5) 0%, rgba(89,89,89,0.5) 12%, rgba(102,102,102,0.5) 25%, rgba(71,71,71,0.5) 39%, rgba(44,44,44,0.5) 50%, rgba(0,0,0,0.5) 51%, rgba(17,17,17,0.5) 60%, rgba(43,43,43,0.5) 76%, rgba(28,28,28,0.5) 91%, rgba(19,19,19,0.5) 100%);
+background: linear-gradient(to bottom, rgba(76,76,76,0.5) 0%, rgba(89,89,89,0.5) 12%, rgba(102,102,102,0.5) 25%, rgba(71,71,71,0.5) 39%, rgba(44,44,44,0.5) 50%, rgba(0,0,0,0.5) 51%, rgba(17,17,17,0.5) 60%, rgba(43,43,43,0.5) 76%, rgba(28,28,28,0.5) 91%, rgba(19,19,19,0.5) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313', GradientType=0 );
+-webkit-box-shadow: 0 1px 0 #D2D2D3, 0 1px 3px rgba(0, 0, 0, .2);
+-moz-box-shadow: 0 1px 0 #d2d2d3, 0 1px 3px rgba(0,0,0,.2);
+-o-box-shadow: 0 1px 0 #d2d2d3, 0 1px 3px rgba(0,0,0,.2);
+box-shadow: 0 1px 0 #D2D2D3, 0 1px 3px rgba(0, 0, 0, .2);
+position: fixed;
+top: 0px;
+left: 0px;
+z-index: 999;
+width:100%;
+}
+
+#cssnav {
+border: 0px;
+margin: 0px;
+padding: 0px;
+width: auto;
+font: $(tabs.font); /* Template Designer - Change Font Type, Size, Etc */
+color: $(tabs.text.color); /* Template Designer - Change Font Size */
+}
+
+#cssnav ul {
+background: $(tabs.background.color); /* Template Designer - Change Menu Background */
+height: 40px; /* Change Height of Menu */
+list-style: none;
+margin: 0px;
+padding: 0px;
+}
+
+#cssnav li {
+float: none;
+display: inline-block;
+padding: 0px;
+}
+
+#cssnav li a {
+background: $(tabs.background.color); /* Template Designer - Change Menu Background */
+display: block;
+margin: 0px;
+text-align: center;
+font: $(tabs.font); /* Template Designer - Change Font Type, Size, Etc */
+text-decoration: none;
+}
+
+#cssnav > ul > li > a {
+color: $(tabs.text.color); /* Template Designer - Change Font Color */
+}
+
+#cssnav ul ul a {
+color: $(tabs.text.color); /* Template Designer - Change Color */
+}
+
+#cssnav li > a:hover, #cssnav ul li:hover {
+color: $(tabs.selected.text.color); /* Template Designer - Change Font Color on Hover */
+background-color: $(tabs.selected.background.color); /* Template Designer - Change Font Background on Hover */
+text-decoration: none;
+}
+
+#cssnav li ul {
+background: $(tabs.background.color); /* Template Designer - Change Menu Background */
+display: none;
+height: auto;
+padding: 0px;
+margin: 0px;
+border: 0px;
+position: absolute;
+width: 200px; /* Change Width Of DropDown Menu */
+z-index:9999;
+}
+
+#cssnav li:hover ul {
+display: block;
+}
+
+#cssnav li li {
+background: $(tabs.background.color); /* Template Designer - Change Background */
+display: block;
+float: none;
+margin: 0px;
+padding: 0px;
+width: 200px; /* Change Width Of DropDown Menu */
+}
+
+#cssnav li:hover li a {
+background: #FFFFFF; /* Template Designer - Change Background of Link on Hover */
+}
+
+#cssnav li ul a {
+display: block;
+height: auto;
+margin: 0px;
+padding: 10px;
+text-align: left;
+}
+
+#cssnav li ul a:hover, #cssnav li ul li:hover > a {
+color: $(tabs.selected.text.color); /* Template Designer - Change Text Color on Hover */
+background-color: $(tabs.selected.background.color); /* Template Designer - Change Background on Hover */
+border: 0px;
+text-decoration: none;
+}
+
 /* CUSTOM SEARCH */
 #searchThis {
   float: right;
@@ -1037,46 +1153,7 @@ head.appendChild(script);
     <div class='fauxborder-left tabs-fauxborder-left'>
     <div class='fauxborder-right tabs-fauxborder-right'/>
     <div class='region-inner tabs-inner'>
-      <b:section class='tabs' id='crosscol' maxwidgets='1' showaddelement='yes'>
-        <b:widget id='PageList1' locked='false' title='' type='PageList'>
-          <b:includable id='main'>
-  <b:if cond='data:title != &quot;&quot;'><h2><data:title/></h2></b:if>
-  <div class='widget-content'>
-    <b:if cond='data:mobile'>
-      <select expr:id='data:widget.instanceId + &quot;_select&quot;'>
-        <b:loop values='data:links' var='link'>
-          <b:if cond='data:link.isCurrentPage'>
-            <option expr:value='data:link.href' selected='selected'><data:link.title/></option>
-          <b:else/>
-            <option expr:value='data:link.href'><data:link.title/></option>
-          </b:if>
-        </b:loop>
-      </select>
-      <span class='pagelist-arrow'>&amp;#9660;</span>
-
-    <b:else/>
-      <ul>
-        <b:loop values='data:links' var='link'>
-          <b:if cond='data:link.isCurrentPage'>
-            <li class='selected'><a expr:href='data:link.href'><data:link.title/></a>
-			  </li>
-          <b:else/>
-            <li><a expr:href='data:link.href'><data:link.title/></a>
-			</li>
-          </b:if>
-        </b:loop>
-<!--Search form-->
-<form action='/search' id='searchThis' method='get' style='display: inline;'>
-    <input id='searchBox' name='q' onblur='if(this.value==&apos;&apos;)this.value=this.defaultValue;' onfocus='if(this.value==this.defaultValue)this.value=&apos;&apos;;' type='text' value='recherche...' vinput=''/>
-    <input id='searchButton' type='submit' value=''/>
-</form>
-        </ul>
-    </b:if>
-    <b:include name='quickedit'/>
-  </div>
-</b:includable>
-        </b:widget>
-      </b:section>
+      <b:section class='tabs' id='crosscol' maxwidgets='1' showaddelement='yes'/>
       <b:section class='tabs' id='crosscol-overflow' showaddelement='no'/>
     </div>
     </div>
@@ -2296,4 +2373,18 @@ head.appendChild(script);
  </b:if>
 </b:includable>
   </b:widget>
-</b:section-contents><b:section-contents id='sidebar-right-2-1'/><b:section-contents id='sidebar-right-2-2'/><b:section-contents id='sidebar-right-3'/><b:section-contents id='footer-1'/><b:section-contents id='footer-2-1'/><b:section-contents id='footer-2-2'/></html>
+</b:section-contents><b:section-contents id='sidebar-right-2-1'/><b:section-contents id='sidebar-right-2-2'/><b:section-contents id='sidebar-right-3'/><b:section-contents id='footer-1'>
+  <b:widget id='HTML1' locked='false' title='Navigation' type='HTML'>
+    <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
+</b:includable>
+  </b:widget>
+</b:section-contents><b:section-contents id='footer-2-1'/><b:section-contents id='footer-2-2'/></html>
