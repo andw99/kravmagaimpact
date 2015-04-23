@@ -38,7 +38,7 @@ URL:      www.quoll.eu
 
    <Group description="Blog Title" selector=".header h1">
      <Variable name="header.font" description="Font" type="font"
-         default="normal normal 60px 'Expletus Sans',Trebuchet,sans-serif" value="normal normal 60px 'Expletus Sans',Trebuchet,sans-serif"/>
+         default="normal normal 48px 'Expletus Sans',Trebuchet,sans-serif" value="normal normal 48px 'Expletus Sans',Trebuchet,sans-serif"/>
      <Variable name="header.text.color" description="Text Color" type="color" default="#ffffff"  value="#ffffff"/>
    </Group>
 
@@ -940,7 +940,6 @@ head.appendChild(script);
   <div class='fauxborder-right content-fauxborder-right'/>
   <div class='content-inner'>
 
-<b:if cond='data:blog.pageType == &quot;index&quot;'>
     <header>
     <div class='header-outer'>
     <div class='header-cap-top cap-top'>
@@ -1029,7 +1028,6 @@ head.appendChild(script);
     </div>
     </div>
     </header>
-</b:if>
 
     <div class='tabs-outer'>
     <div class='tabs-cap-top cap-top'>
@@ -1039,7 +1037,43 @@ head.appendChild(script);
     <div class='fauxborder-left tabs-fauxborder-left'>
     <div class='fauxborder-right tabs-fauxborder-right'/>
     <div class='region-inner tabs-inner'>
-      <b:section class='tabs' id='crosscol' maxwidgets='1' showaddelement='yes'/>
+      <b:section class='tabs' id='crosscol' maxwidgets='1' showaddelement='yes'>
+        <b:widget id='PageList1' locked='false' title='Pages' type='PageList'>
+          <b:includable id='main'>
+  <b:if cond='data:title != &quot;&quot;'><h2><data:title/></h2></b:if>
+    <div class='widget-content'>
+        <b:if cond='data:mobile'>
+      <select expr:id='data:widget.instanceId + &quot;_select&quot;'>
+        <b:loop values='data:links' var='link'>
+          <b:if cond='data:link.isCurrentPage'>
+            <option expr:value='data:link.href' selected='selected'><data:link.title/></option>
+          <b:else/>
+            <option expr:value='data:link.href'><data:link.title/></option>
+          </b:if>
+        </b:loop>
+      </select>
+      <span class='pagelist-arrow'>&amp;#9660;</span>
+
+    <b:else/>
+      <ul>
+        <b:loop values='data:links' var='link'>
+          <b:if cond='data:link.isCurrentPage'>
+              <li class='selected'><a expr:href='data:link.href'><data:link.title/></a></li>
+          <b:else/>
+            <li><a expr:href='data:link.href'><data:link.title/></a></li>
+          </b:if>
+        </b:loop>
+        <form id="searchThis" action="/search" style="display: inline;" method="get">
+        <input onfocus="if(this.value==this.defaultValue)this.value='';" value="recherche..." type="text" id="searchBox" onblur="if(this.value=='')this.value=this.defaultValue;" vinput="" name="q" />
+        <input id="searchButton" value="" type="submit" />
+        </form>
+      </ul>
+    </b:if>
+    <b:include name='quickedit'/>
+  </div>
+</b:includable>
+        </b:widget>
+      </b:section>
       <b:section class='tabs' id='crosscol-overflow' showaddelement='no'/>
     </div>
     </div>
