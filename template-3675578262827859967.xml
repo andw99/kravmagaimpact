@@ -197,6 +197,11 @@ a:hover {
 .header h1 a {
   color: $(header.text.color);
 }
+.word1 .char2 {
+  color: red !important;
+  font-weight: 700 !important;
+  font-size: 1.2em !important;
+}
 .char1 {
   color: red !important;
   font-weight: 700 !important;
@@ -1029,10 +1034,55 @@ head.appendChild(script);
       <b:section class='header' id='header' maxwidgets='1' showaddelement='no'>
         <b:widget id='Header1' locked='true' title='Krav Maga Impact (en-tête)' type='Header'>
           <b:includable id='main'>
-              <div class="titlewrapper">
-<a href='/'><div style="background: transparent; width: 100%; height: 73px; margin-bottom: 13px; ">
-    <img style="clip-path:  ellipse(36px 30px at center); -moz-clip-path:  ellipse(36px 30px at center); -webkit-clip-path: ellipse(36px 30px at center);" border="0" src="http://1.bp.blogspot.com/-3VkW8Ue9V-o/VTzf-frV3FI/AAAAAAAAASE/WGerJKqQU0U/s1600/logo_academy.jpg" height="73" width="73" /><h1 class="title">&#160;&#160;&#160;&#160;&#160;&#160; Krav Maga Impact</h1></div></a>
-</div>
+
+  <b:if cond='data:useImage'>
+    <b:if cond='data:imagePlacement == &quot;BEHIND&quot;'>
+      <!--
+      Show image as background to text. You can't really calculate the width
+      reliably in JS because margins are not taken into account by any of
+      clientWidth, offsetWidth or scrollWidth, so we don't force a minimum
+      width if the user is using shrink to fit.
+      This results in a margin-width's worth of pixels being cropped. If the
+      user is not using shrink to fit then we expand the header.
+      -->
+      <b:if cond='data:mobile'>
+        <div id='header-inner'>
+          <div class='titlewrapper' style='background: transparent'>
+            <h1 class='title' style='background: transparent; border-width: 0px'>
+              <b:include name='title'/>
+            </h1>
+          </div>
+        </div>
+      <b:else/>
+        <div expr:style='&quot;background-image: url(\&quot;&quot; + data:sourceUrl + &quot;\&quot;); &quot; + &quot;background-position: &quot; + data:backgroundPositionStyleStr + &quot;; &quot; + data:widthStyleStr + &quot; min-height: &quot; + data:height + &quot;_height: &quot; + data:height + &quot;background-repeat: no-repeat; &quot;' id='header-inner'>
+          <div class='titlewrapper' style='background: transparent'>
+            <h1 class='title' style='background: transparent; border-width: 0px'>
+              <b:include name='title'/>
+            </h1>
+          </div>
+        </div>
+      </b:if>
+    <b:else/>
+      <!--Show the image only-->
+      <div id='header-inner'>
+        <a expr:href='data:blog.homepageUrl' style='display: block'>
+          <img expr:alt='data:title' expr:height='data:height' expr:id='data:widget.instanceId + &quot;_headerimg&quot;' expr:src='data:sourceUrl' expr:width='data:width' style='display: block'/>
+        </a>
+        <!--Show the description-->
+        <b:if cond='data:imagePlacement == &quot;BEFORE_DESCRIPTION&quot;'>
+        </b:if>
+      </div>
+    </b:if>
+  <b:else/>
+    <!--No header image -->
+    <div id='header-inner'>
+      <div class='titlewrapper'>
+        <h1 class='title'>
+          <b:include name='title'/>
+        </h1>
+      </div>
+    </div>
+  </b:if>
 </b:includable>
           <b:includable id='description'>
   <div class='descriptionwrapper'>
