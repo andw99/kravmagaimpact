@@ -193,6 +193,8 @@ a:hover {
 .header h1 {
   font: $(header.font);
   color: $(header.text.color);
+  margin-left: 20px;
+  position: relative;
 }
 .header h1 a {
   color: $(header.text.color);
@@ -1031,7 +1033,7 @@ head.appendChild(script);
           <b:includable id='main'>
               <div class="titlewrapper">
 <a href='/'><div style="background: transparent; width: 100%; height: 73px; margin-bottom: 13px; ">
-    <img style="clip-path:  ellipse(36px 30px at center); -moz-clip-path:  ellipse(36px 30px at center); -webkit-clip-path: ellipse(36px 30px at center);" border="0" src="http://1.bp.blogspot.com/-3VkW8Ue9V-o/VTzf-frV3FI/AAAAAAAAASE/WGerJKqQU0U/s1600/logo_academy.jpg" height="73" width="73" /><h1 class="title">&#160;&#160;&#160;&#160;&#160;&#160; Krav Maga Impact</h1></div></a>
+    <h1 class="title">Krav Maga Impact</h1></div></a>
 </div>
 </b:includable>
           <b:includable id='description'>
@@ -2039,8 +2041,6 @@ head.appendChild(script);
         </div>
         </div>
 
-		<b:if cond='data:blog.pageType == &quot;index&quot;'>
-
         <div class='column-right-outer'>
         <div class='column-right-inner'>
           <aside>
@@ -2053,8 +2053,6 @@ head.appendChild(script);
           </aside>
         </div>
         </div>
-
-		</b:if>
 
         </div>
 
